@@ -3,6 +3,6 @@
     public interface IKafkaMessageHandler
     {
         string Topic { get; }
-        Task HandleMessageAsync(string message);
+        Task HandleMessageAsync(string message, CancellationToken cancellationToken);
     }
 }

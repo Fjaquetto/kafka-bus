@@ -16,6 +16,7 @@ namespace Kafka.Bus.Config
             });
             services.AddSingleton<IKafkaProducerService, KafkaProducerService>();
             services.AddSingleton<IKafkaConsumerService, KafkaConsumerService>();
+            services.AddHostedService<KafkaConsumerBackgroundService>();
 
             return services;
         }
